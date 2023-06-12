@@ -1,11 +1,13 @@
 // Import packages
 const express = require("express");
+const cors = require('cors');
 const home = require("./routes/home");
 const test = require("./routes/test");
 
 // Middlewares
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Routes
 app.use("/home", home);
