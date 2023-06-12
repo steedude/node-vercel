@@ -2,12 +2,10 @@
 const express = require("express");
 const home = require("./routes/home");
 const test = require("./routes/test");
-const cors = require('cors');
 
 // Middlewares
 const app = express();
 app.use(express.json());
-app.use(cors());
 
 // Routes
 app.use("/home", home);
