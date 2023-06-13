@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/test1", async (req, res, next) => {
-  return res.status(200).json({
+  res.status(200).json({
     "items":[
       {
         "id": 1,
@@ -39,17 +39,24 @@ router.get("/test1", async (req, res, next) => {
 });
 
 router.get("/test2", async (req, res, next) => {
-  return res.status(200).json([{ id: 1, name: 'User 1' },{ id: 2, name: 'User 2' },{ id: 3, name: 'User 3' }]);
+  res.status(200).json([{ id: 1, name: 'User 1' },{ id: 2, name: 'User 2' },{ id: 3, name: 'User 3' }]);
 });
 
 router.get("/test2-1", async (req, res, next) => {
-  return res.status(200).json([{ id: 1, name: 'User 1' }]);
+  setTimeout((() => {
+    res.status(200).json([{ id: 1, name: 'User 1' }]);
+  }), 1000)
 });
 router.get("/test2-2", async (req, res, next) => {
-  return res.status(200).json([{ id: 2, name: 'User 2' }]);
+  setTimeout((() => {
+    res.status(200).json([{ id: 2, name: 'User 2' }]);
+  }), 1500)
+  
 });
 router.get("/test2-3", async (req, res, next) => {
-  return res.status(200).json([{ id: 3, name: 'User 3' }]);
+  setTimeout((() => {
+    res.status(200).json([{ id: 3, name: 'User 3' }]);
+  }), 2000)
 });
 
 module.exports = router;
