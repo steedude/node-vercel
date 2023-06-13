@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", async (req, res, next) => {
+router.get("/test1", async (req, res, next) => {
   return res.status(200).json({
     "items":[
       {
@@ -36,6 +36,20 @@ router.get("/", async (req, res, next) => {
       }
     ]
   });
+});
+
+router.get("/test2", async (req, res, next) => {
+  return res.status(200).json([{ id: 1, name: 'User 1' },{ id: 2, name: 'User 2' },{ id: 3, name: 'User 3' }]);
+});
+
+router.get("/test2-1", async (req, res, next) => {
+  return res.status(200).json({ id: 1, name: 'User 1' });
+});
+router.get("/test2-2", async (req, res, next) => {
+  return res.status(200).json({ id: 2, name: 'User 2' });
+});
+router.get("/test2-3", async (req, res, next) => {
+  return res.status(200).json({ id: 3, name: 'User 3' });
 });
 
 module.exports = router;
