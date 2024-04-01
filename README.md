@@ -1,8 +1,13 @@
 # node-express-vercel
-Hosting express node project on vercel
 
-### Video
-> https://youtu.be/vCuf62T2snY
+## 功能
 
-### Deployed on
-> https://node-express-vercel-rose.vercel.app/home
+測試在 vercel 上部署 express
+
+## 教學影片
+
+[youtue](https://youtu.be/vCuf62T2snY)
+
+## 部署網址
+
+[vercel](https://node-express-vercel-rose.vercel.app/home)
